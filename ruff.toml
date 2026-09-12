@@ -1,0 +1,5 @@
+line-length = 120
+
+[lint]
+# Correctness-focused: pyflakes (F), import order (I), syntax errors (E9).
+select = ["E9", "F", "I"]

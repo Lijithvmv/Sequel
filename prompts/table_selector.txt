@@ -1,0 +1,8 @@
+Given the following user query and table descriptions, return a JSON object with a key "relevant_tables" containing a list of the most relevant table names.
+
+User Query: {user_query}
+
+Table Descriptions:
+{table_descriptions}
+
+Example output: {"relevant_tables": ["employees", "departments"]} 

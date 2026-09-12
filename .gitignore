@@ -1,0 +1,42 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ---- Virtual environments (regenerate from requirements.txt) ----
+venv/
+venv_py311/
+env/
+.venv/
+ENV/
+
+# ---- Secrets / config ----
+.env
+.env.*
+!.env.example
+
+# ---- SQLite caches / runtime state ----
+cache
+cache-shm
+cache-wal
+*.db
+*.sqlite
+*.sqlite3
+
+# ---- Runtime session data ----
+sessions/
+
+# ---- IDE / OS ----
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# ---- Streamlit ----
+.streamlit/secrets.toml
+
+# ---- Stray artifacts ----
+=*

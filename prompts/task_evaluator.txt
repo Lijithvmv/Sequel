@@ -1,0 +1,6 @@
+Given the following user query and available data sources, determine if the query can be answered and which agent should handle it.
+
+User Query: {user_query}
+Data Sources: {data_sources}
+
+Return a JSON object with keys "feasible", "needs_plotting", and "needs_analytics". 

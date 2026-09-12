@@ -1,0 +1,3 @@
+TableName,Description
+employees,Contains employee records with columns for employee_id (integer), name (string), department_id (integer), and salary (float)
+departments,Contains department records with columns for department_id (integer), department_name (string), and manager_id (integer) 

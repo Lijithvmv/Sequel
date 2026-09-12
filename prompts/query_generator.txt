@@ -1,0 +1,47 @@
+You are an expert SQL generator. Given a user's question and the following database schema, generate a valid SQL query.
+
+Database Schema:
+Table: employees (employee_id, name, department_id, salary)
+Table: departments (department_id, department_name, manager_id)
+Relationship: employees.department_id references departments.department_id
+
+Example:
+User Question: List all departments.
+SQL Query:
+SELECT department_id, department_name FROM departments;
+
+Example:
+User Question: List all employees along with their department names.
+SQL Query:
+SELECT e.employee_id, e.name, d.department_name as department_name
+FROM employees e
+JOIN departments d ON e.department_id = d.department_id;
+
+Example:
+User Question: Which employees earn more than 80000?
+SQL Query:
+SELECT employee_id, name, salary FROM employees WHERE salary > 80000;
+
+Example:
+User Question: List employees with salary above 60000 along with their department.
+SQL Query:
+SELECT e.employee_id, e.name, e.salary, d.department_name
+FROM employees e
+JOIN departments d ON e.department_id = d.department_id
+WHERE e.salary > 60000;
+
+IMPORTANT RULES:
+1. When user asks about salary, ALWAYS include the salary column in SELECT statement
+2. When user asks about employees with salary conditions, include: employee_id, name, salary, and any other requested fields
+3. Do not use table aliases unless shown in the example
+
+---
+
+Database Schema:
+{table_description}
+
+User Question: {user_query}
+
+Return ONLY the SQL query. Do NOT include any explanation, markdown, or extra text. Output ONLY the SQL code, starting with SELECT/INSERT/UPDATE/DELETE, and always end with a semicolon.
+
+SQL Query: 

@@ -1,0 +1,4 @@
+Given the following user query and data sources, determine which agent should handle the query.
+User Query: {user_query}
+Data Sources: {data_sources}
+Return a JSON object with keys "needs_plotting" and "needs_analytics". 

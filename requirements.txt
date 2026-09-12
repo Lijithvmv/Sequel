@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic
+pandas
+python-dotenv
+langchain
+streamlit
+requests
+# pandasai==2.2.15  # Optional - causes build issues on some systems
+mysql-connector-python 

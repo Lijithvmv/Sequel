@@ -1,0 +1,7 @@
+Given the following user query, SQL query, and table description, validate and correct the SQL if needed.
+
+User Query: {user_query}
+SQL Query: {sql_query}
+Table Description: {table_description}
+
+Return the corrected SQL query as plain text. 
