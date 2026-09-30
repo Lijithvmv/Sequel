@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.svg" alt="Sequel — ask your database in plain English" width="100%">
+</p>
+
 # Sequel
 
 > **Ask your database in plain English.** Sequel is an agentic natural-language-to-SQL assistant:
