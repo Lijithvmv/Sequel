@@ -56,7 +56,7 @@
 
   <!-- wordmark -->
   <g transform="translate(96,150)">
-    <rect x="0" y="-34" width="156" height="30" rx="6" fill="#1c1230" stroke="#4c3a7a"/>
+    <rect x="0" y="-34" width="186" height="30" rx="6" fill="#1c1230" stroke="#4c3a7a"/>
     <text x="16" y="-13" font-size="15" letter-spacing="2" font-weight="600" fill="#a78bfa">AGENTIC · NL → SQL</text>
 
     <text x="0" y="78" font-size="92" font-weight="800" fill="#f5f3ff" letter-spacing="-1">Sequel</text>
@@ -91,6 +91,6 @@
 
   <g transform="translate(96,600)" font-size="17" fill="#7a68a6">
     <text x="0" y="0">github.com/Lijithvmv/Sequel</text>
-    <text x="1184" y="0" text-anchor="end" fill="#665690">Python</text>
+    <text x="1088" y="0" text-anchor="end" fill="#665690">Python  ·  works with your schema</text>
   </g>
 </svg>
