@@ -16,6 +16,7 @@ from core.config import (
     single_table_description_path,
 )
 from core.logger import get_logger, log_performance
+from core.utils.readonly_guard import check_read_only
 from core.utils.sqlfilter import add_sql_filter
 
 try:
@@ -48,6 +49,11 @@ class QueryExecutor(object):
     def __init__(self):
         # Parse DATABASE_URL from Config
         db_url = Config.DATABASE_URL
+        if not db_url:
+            raise ValueError(
+                "DATABASE_URL is not set. Copy .env.example to .env and set it, using a database user "
+                "that only has SELECT rights."
+            )
         parsed = urlparse(db_url)
         
         self.db_type = parsed.scheme.split('+')[0]  # mysql, postgresql, etc.
@@ -144,6 +150,7 @@ class QueryExecutor(object):
     def execute_single_query(self, final_query: str, params: Optional[Dict[str, Any]] = None) -> Tuple[pd.DataFrame, Optional[Exception]]:
 
         try:
+            check_read_only(final_query)  # deterministic: refuses anything but one read-only statement
             self.logger.info(f"SQL TO EXECUTE: {final_query}")
             self.logger.info("Creating cursor...")
             with self.connection.cursor() as cursor:

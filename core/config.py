@@ -7,11 +7,9 @@ load_dotenv()
 
 
 class Config:
-    # Never hardcode real credentials. Set DATABASE_URL in your .env (see .env.example).
-    DATABASE_URL = os.getenv(
-        "DATABASE_URL",
-        "mysql+mysqlconnector://root:password@localhost:3306/company",
-    )
+    # Never hardcode credentials. Set DATABASE_URL in your .env (see .env.example), using a database user that
+    # only has SELECT rights. There is deliberately no default.
+    DATABASE_URL = os.getenv("DATABASE_URL")
     OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
     OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3:8b")
     EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "all-MiniLM-L6-v2")
